@@ -25,7 +25,7 @@ SECRET_KEY = '%v2pr$zi2jn(w0yl_fzz-2$jdj^3+r!2%+x=h0&s0ce8_25(@)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'zhoubin50.pythonanywhere.com']
+ALLOWED_HOSTS = [u'zhoubin50.pythonanywhere.com',u'zhoubin51.pythonanywhere.com']
 
 
 # Application definition
@@ -82,9 +82,11 @@ DATABASES = {
         'USER': 'zhoubin50',
         'PASSWORD': 'zhujine777456',
         'HOST': 'zhoubin50.mysql.pythonanywhere-services.com',
-    }
+        'OPTIONS': {
+            'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
+        },
 }
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
